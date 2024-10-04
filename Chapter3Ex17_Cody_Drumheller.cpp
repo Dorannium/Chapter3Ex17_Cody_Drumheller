@@ -23,10 +23,16 @@ using namespace std;
 	 int num1 = rand() % 900 + 100;
 	 int num2 = rand() % 900 + 100;
 	 cout << " Solve the following addition problem: " << num1 <<  " + " << num2 << "?" << endl;
-	 cout << " Press any key when you're ready to see the answer... ";
-	 cin.get();
+	 int student_answer;
+	 cout << "Enter your answer: ";
+	 cin >> student_answer;
 	 int correct_answer = num1 + num2;
-	 cout << "The correct answer is: " << correct_answer << endl;
+	 if (student_answer == correct_answer) {
+		 cout << "You are correct! " << endl;
+	 }
+	 else {
+		 cout << " Your answer is not correct. The correct answer is: " << correct_answer << endl;
+	 }
 	 return 0;
 
 }
